@@ -4,265 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Stefan Barth | Software Developer</title>
+<title data-i18n="pageTitle">Stefan Barth | Software Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<style>
-
-:root {
-    --primary: #0C5678;
-    --secondary: #3C0061;
-    --light: #f9fbfd;
-    --dark: #1a1a1a;
-}
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
-}
-
-body {
-    background: var(--light);
-    color: var(--dark);
-    line-height: 1.6;
-}
-
-section {
-    padding: 80px 20px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-}
-
-/* ================= Animations ================= */
-
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-}
-
-.fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Floating animation */
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0); }
-}
-
-/* ================= Header ================= */
-
-header {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-    color: white;
-}
-
-.hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Profile Photo */
-.profile-photo {
-    width: 280px;
-    height: 280px;
-    background-color: rgba(255,255,255,0.2);
-    background-image: url("assets/images/profile.jpg"), url("assets/images/profile.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    margin: auto;
-    border: 4px solid rgba(255,255,255,0.4);
-
-    animation: float 6s ease-in-out infinite;
-}
-
-/* ================= Sections ================= */
-
-h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    text-align: center;
-    color: var(--primary);
-}
-
-/* ================= Experience ================= */
-
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-}
-
-.experience-card {
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    text-align: center;
-
-    transition: all 0.3s ease;
-}
-
-.experience-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.experience-card h3 {
-    margin-bottom: 10px;
-    color: var(--secondary);
-}
-
-/* ================= Projects ================= */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    text-align: center;
-
-    transition: all 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-}
-
-/* App Icon */
-.app-icon {
-    width: 90px;
-    height: 90px;
-    background: #eee;
-    border-radius: 20px;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    color: #777;
-
-    transition: all 0.3s ease;
-}
-
-.project-card:hover .app-icon {
-    transform: scale(1.1) rotate(3deg);
-}
-
-/* ================= Links ================= */
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-}
-
-a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: var(--secondary);
-    left: 0;
-    bottom: -3px;
-    transition: 0.3s;
-}
-
-a:hover::after {
-    width: 100%;
-}
-
-/* ================= Contact ================= */
-
-.contact-box {
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--secondary)
-    );
-    color: white;
-    padding: 50px 30px;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.contact-box a {
-    color: white;
-}
-
-/* ================= Footer ================= */
-
-footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-/* ================= Responsive ================= */
-
-@media (max-width: 768px) {
-
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .profile-photo {
-        width: 220px;
-        height: 220px;
-    }
-}
-
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -272,15 +18,24 @@ footer {
 <header>
     <div class="container hero fade-up">
 
-        <div>
-            <h1>Stefan Barth</h1>
-            <p>
+        <div class="hero-left">
+            <div class="hero-top">
+                <div class="title">
+                    <h1>Stefan Barth, M.Sc.</h1>
+                </div>
+                <div class="lang-toggle" aria-hidden>
+                    <button id="lang-en" class="lang-btn active">EN</button>
+                    <button id="lang-de" class="lang-btn">DE</button>
+                </div>
+            </div>
+
+            <p id="hero-tagline">
                 Professional Software Developer<br />
                 Building scalable software & mobile apps
             </p>
         </div>
 
-        <div class="profile-photo" />
+        <div class="profile-photo" role="img" aria-label="Profile photo"></div>
 
     </div>
 </header>
@@ -290,28 +45,28 @@ footer {
 <section class="fade-up">
 <div class="container">
 
-<h2>Experience</h2>
+<h2 data-i18n="experience">Experience</h2>
 
 <div class="experience-grid">
 
     <div class="experience-card">
         <h3>Java</h3>
-        <p>20+ years professional experience</p>
+    <p data-i18n="expYears">20+ years professional experience</p>
     </div>
 
     <div class="experience-card">
         <h3>Android</h3>
-        <p>Native mobile development</p>
+        <p data-i18n="expAndroid">Native mobile development</p>
     </div>
 
     <div class="experience-card">
         <h3>iOS</h3>
-        <p>Swift & iOS ecosystem</p>
+        <p data-i18n="expIOS">Swift & iOS ecosystem</p>
     </div>
 
     <div class="experience-card">
         <h3>Flutter</h3>
-        <p>Cross-platform apps</p>
+        <p data-i18n="expFlutter">Cross-platform apps</p>
     </div>
 
 </div>
@@ -324,31 +79,35 @@ footer {
 <section class="fade-up">
 <div class="container">
 
-<h2>Projects</h2>
+<h2 data-i18n="projects">Projects</h2>
 
 <div class="projects-grid">
 
-<div class="project-card">
+<div class="project-card" id="parlito">
 
-    <div class="app-icon">App Icon</div>
+    <div class="app-icon app-icon--parlito" aria-hidden></div>
 
-    <h3>App Name</h3>
+    <h3>Parlito</h3>
 
-    <p>Short description of the app.</p>
+    <p data-i18n-desc-parlito>Vocabulary trainer based on the most used words in English.</p>
 
-    <a href="#">View on App Store</a>
+    <div class="badges">
+    <a class="store-badge" data-i18n="storeBadge" href="https://apps.apple.com/us/app/parlito/id6627338671" target="_blank" rel="noopener noreferrer">View on the App Store</a>
+    </div>
 
 </div>
 
-<div class="project-card">
+<div class="project-card" id="lefty">
 
-    <div class="app-icon">App Icon</div>
+    <div class="app-icon app-icon--lefty" aria-hidden></div>
 
-    <h3>App Name</h3>
+    <h3>Lefty</h3>
 
-    <p>Short description of the app.</p>
+    <p data-i18n-desc-lefty>Expense tracker to keep an eye on your monthly budget.</p>
 
-    <a href="#">View on App Store</a>
+    <div class="badges">
+    <a class="store-badge" data-i18n="storeBadge" href="https://apps.apple.com/us/app/lefty-budget-tracker/id6758635422" target="_blank" rel="noopener noreferrer">View on the App Store</a>
+    </div>
 
 </div>
 
@@ -362,21 +121,32 @@ footer {
 <section class="fade-up">
 <div class="container">
 
-<h2>Contact</h2>
+<h2 data-i18n="contact">Contact</h2>
 
 <div class="contact-box">
 
-<p>
-Email:
-<a href="mailto:your@email.com">your@email.com</a>
-</p>
+<div class="social-links" aria-label="Social links">
+    <a class="contact-email" href="mailto:parlito.app@gmail.com">
+        <!-- Envelope SVG -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5L4 8V6l8 5 8-5v2z"></path>
+        </svg>
+    </a>
 
-<p>
-XING:
-<a href="https://www.xing.com/profile/your-profile" target="_blank">
-View Profile
-</a>
-</p>
+    <a href="https://github.com/sbarth" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <!-- GitHub SVG -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 0.5C5.73 0.5 0.75 5.48 0.75 11.75c0 4.96 3.22 9.16 7.69 10.64.56.1.76-.24.76-.54 0-.27-.01-1-.02-1.96-3.13.68-3.79-1.51-3.79-1.51-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .17 2.03.77 2.53 1.4.08-1.09.39-1.81.71-2.23-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .94-.3 3.08 1.16.89-.25 1.84-.38 2.79-.38.95 0 1.9.13 2.79.38 2.14-1.46 3.08-1.16 3.08-1.16.61 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.31-2.64 5.28-5.15 5.56.4.35.75 1.05.75 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.65.77.54C20.03 20.91 23.25 16.71 23.25 11.75 23.25 5.48 18.27 0.5 12 0.5z"></path>
+        </svg>
+    </a>
+
+    <a href="https://www.xing.com/profile/Stefan_Barth33" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="XING">
+        <!-- XING SVG (simplified mark) -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.6 5.6L9.9 12l-3.3 6.4h2.7l3.3-6.4L15.9 18h2.7L13.8 12l4.8-8.4h-2.7L11.7 9.6 8.4 1.2H5.7L9 9.6 6.6 5.6z"></path>
+        </svg>
+    </a>
+</div>
 
 </div>
 
@@ -386,32 +156,10 @@ View Profile
 <!-- ================= Footer ================= -->
 
 <footer>
-© 2026 Stefan Barth — Software Developer
+    <span data-i18n="footer">© 2026 Stefan Barth, M.Sc. — Software Developer</span>
 </footer>
 
-<!-- ================= JS: Scroll Animation ================= -->
-
-<script>
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
-
-    });
-
-}, {
-    threshold: 0.2
-});
-
-document.querySelectorAll(".fade-up").forEach(el => {
-    observer.observe(el);
-});
-
-</script>
+<script src="assets/main.js"></script>
 
 </body>
 </html>
