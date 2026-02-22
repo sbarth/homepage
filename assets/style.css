@@ -250,8 +250,8 @@ h2 {
 
 .store-badge {
     display: inline-block;
-    background: #111;
-    color: white;
+    background: transparent; /* remove solid background as requested */
+    color: var(--primary);    /* use the page primary color */
     padding: 10px 14px;
     border-radius: 10px;
     font-weight: 700;

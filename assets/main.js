@@ -20,7 +20,7 @@ const translations = {
     descParlito: 'Vocabulary trainer based on the most used words in English.',
     descLefty: 'Expense tracker to keep an eye on your monthly budget.',
     expYears: '20+ years professional experience',
-    storeBadge: 'View on the App Store',
+  storeBadge: 'App Store',
     footer: '© 2026 Stefan Barth, M.Sc. — Software Developer'
     ,expAndroid: 'Native mobile development',
     expIOS: 'Swift & iOS ecosystem',
@@ -35,7 +35,7 @@ const translations = {
     descParlito: 'Vokabeltrainer basierend auf den meistgenutzten Wörtern im Englischen.',
     descLefty: 'Ausgaben-Tracker, um dein Monatsbudget im Blick zu behalten.',
     expYears: '20+ Jahre Berufserfahrung',
-    storeBadge: 'Im App Store ansehen',
+  storeBadge: 'App Store',
     footer: '© 2026 Stefan Barth, M.Sc. — Softwareentwickler',
     expAndroid: 'Native Mobile-Entwicklung',
     expIOS: 'Swift & iOS-Ökosystem',
