@@ -21,6 +21,7 @@ const translations = {
     descLefty: 'Expense tracker to keep an eye on your monthly budget.',
     expYears: '20+ years professional experience',
   storeBadge: 'App Store',
+  supportBadge: 'Support',
     footer: '© 2026 Stefan Barth, M.Sc. — Software Developer'
     ,expAndroid: 'Native mobile development',
     expIOS: 'Swift & iOS ecosystem',
@@ -36,6 +37,7 @@ const translations = {
     descLefty: 'Ausgaben-Tracker, um dein Monatsbudget im Blick zu behalten.',
     expYears: '20+ Jahre Berufserfahrung',
   storeBadge: 'App Store',
+  supportBadge: 'Support',
     footer: '© 2026 Stefan Barth, M.Sc. — Softwareentwickler',
     expAndroid: 'Native Mobile-Entwicklung',
     expIOS: 'Swift & iOS-Ökosystem',
@@ -67,8 +69,13 @@ function setLanguage(lang) {
 }
 
 // Attach handlers
-document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
-document.getElementById('lang-de').addEventListener('click', () => setLanguage('de'));
+const langEnButton = document.getElementById('lang-en');
+const langDeButton = document.getElementById('lang-de');
+
+if (langEnButton && langDeButton) {
+  langEnButton.addEventListener('click', () => setLanguage('en'));
+  langDeButton.addEventListener('click', () => setLanguage('de'));
+}
 
 // set initial language
 setLanguage('en');
