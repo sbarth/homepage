@@ -213,6 +213,120 @@ h2 {
     box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
+/* ================= Lefty Support Page ================= */
+.lefty-section {
+    padding: 56px 20px;
+}
+
+.lefty-section-alt {
+    background: rgba(12, 86, 120, 0.04);
+}
+
+.lefty-sections {
+    max-width: 900px;
+}
+
+.lefty-card {
+    background: white;
+    border-radius: 18px;
+    padding: 34px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.lefty-card h2 {
+    text-align: left;
+    margin-bottom: 14px;
+    font-size: 2rem;
+}
+
+.lefty-lead {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    color: var(--dark);
+}
+
+.lefty-list {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    margin: 8px 0 20px;
+}
+
+.lefty-list li {
+    position: relative;
+    background: transparent;
+    border-radius: 0;
+    padding: 10px 0 10px 30px;
+    border-left: none;
+    border-bottom: 1px solid rgba(12, 86, 120, 0.14);
+    font-weight: 500;
+    text-align: left;
+}
+
+.lefty-list li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    transform: translateY(-50%);
+}
+
+.lefty-list-negative li::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--secondary);
+}
+
+.lefty-list li:last-child {
+    border-bottom: none;
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.faq-item {
+    border: 1px solid rgba(12, 86, 120, 0.14);
+    border-radius: 12px;
+    background: var(--light);
+    overflow: hidden;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--primary);
+    padding: 14px 16px;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    float: right;
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    padding: 0 16px 14px;
+    color: var(--dark);
+}
+
 /* App Icon */
 .app-icon {
     width: 90px;
@@ -271,6 +385,14 @@ h2 {
     font-weight: 700;
     text-decoration: none;
     font-size: 0.9rem;
+}
+
+.header-lefty .store-badge {
+    color: white;
+}
+
+.header-lefty .store-badge::after {
+    background: white;
 }
 
 /* ================= Links ================= */
@@ -394,5 +516,13 @@ footer {
     .hero-top {
         flex-direction: column;
         gap: 12px;
+    }
+
+    .lefty-card {
+        padding: 24px;
+    }
+
+    .lefty-card h2 {
+        font-size: 1.7rem;
     }
 }
