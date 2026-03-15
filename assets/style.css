@@ -215,7 +215,13 @@ h2 {
 
 /* ================= Lefty Support Page ================= */
 .lefty-section {
-    padding: 56px 20px;
+    padding: 32px 20px;
+}
+
+.header-lefty + .lefty-section {
+    margin-top: -72px;
+    position: relative;
+    z-index: 2;
 }
 
 .lefty-section-alt {
@@ -284,6 +290,54 @@ h2 {
 
 .lefty-list li:last-child {
     border-bottom: none;
+}
+
+.lefty-mail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.lefty-mail-link svg {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+}
+
+.lefty-mail-link::after {
+    display: none;
+}
+
+.lefty-mail-link:hover {
+    opacity: 0.85;
+}
+
+.lefty-contact-section {
+    background: transparent;
+}
+
+.lefty-contact-card {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(12, 86, 120, 0.1), rgba(60, 0, 97, 0.08));
+    border: 1px solid rgba(12, 86, 120, 0.18);
+    box-shadow: 0 14px 34px rgba(12, 86, 120, 0.12);
+}
+
+.lefty-contact-card h2 {
+    text-align: center;
+}
+
+.lefty-contact-card .lefty-lead {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lefty-contact-card .lefty-mail-link {
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.75);
 }
 
 .faq-list {
@@ -524,5 +578,9 @@ footer {
 
     .lefty-card h2 {
         font-size: 1.7rem;
+    }
+
+    .header-lefty + .lefty-section {
+        margin-top: -40px;
     }
 }
